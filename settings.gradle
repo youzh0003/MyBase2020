@@ -1,0 +1,2 @@
+rootProject.name='MyBase2020'
+include ':app'

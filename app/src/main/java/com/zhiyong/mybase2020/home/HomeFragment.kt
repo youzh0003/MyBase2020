@@ -1,6 +1,7 @@
 package com.zhiyong.mybase2020.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,12 +12,12 @@ import com.zhiyong.mybase2020.adapter.FadeAnimator
 import com.zhiyong.mybase2020.base.BaseFragment
 import com.zhiyong.mybase2020.model.TestData
 import com.zhiyong.mybase2020.modelview.TestModel
-import com.zhiyong.mybase2020.modelview.TestModel_
 import com.zhiyong.mybase2020.utils.DateUtils
-import com.zhiyong.mybase2020.utils.DateUtils.PATTERN_YYYY_MM_DD_HH_MM_1
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment: BaseFragment(), HomeContract.View, TestModel.Listener {
+
+    private val TAG = javaClass.simpleName
 
     interface Listener {
 

@@ -31,6 +31,11 @@ abstract class TestModel: EpoxyModelWithHolder<TestModel.TestHolder>() {
         }
     }
 
+    override fun unbind(holder: TestHolder) {
+        super.unbind(holder)
+        holder.itemView.setOnLongClickListener(null)
+    }
+
     inner class TestHolder: KotlinHolder(){
         val itemView by bind<ConstraintLayout>(R.id.parentLayout)
         val tvText by bind<TextView>(R.id.tvText)

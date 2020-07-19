@@ -42,4 +42,11 @@ open class BaseActivity : AppCompatActivity() {
         transaction.commit()
         fm.executePendingTransactions()
     }
+
+    override fun onBackPressed() {
+        if(supportFragmentManager.backStackEntryCount <= 1){
+            finish()
+        }
+        else super.onBackPressed()
+    }
 }
